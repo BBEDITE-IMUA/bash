@@ -1,0 +1,12 @@
+name: Проверка репозитория
+on: [push]
+jobs:
+  tests:
+    name: Тесты скриптов
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Тест копирования файла
+      run: |
+        chmod +x 1_test.sh
+        ./1_test.sh 1.sh
