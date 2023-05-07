@@ -19,6 +19,7 @@ then
 fi
 
 hash1=$(sha256sum $SourceDir/testFile.txt | awk '{ print $1 }')
+hash2=$(sha256sum $tempDir/$SourceDir/testFile.txt | awk '{ print $1 }')
 
 if [ "$hash1" == "$hash2" ]
 then
