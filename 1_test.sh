@@ -9,7 +9,7 @@ mkdir $tempDir
 mkdir $SourceDir
 echo "Test Text" > $SourceDir/testFile.txt
 
-bash $1 "$SourceDir" "$tempDir"
+bash 1.sh "$SourceDir" "$tempDir"
 
 if [[ ! -f "$tempDir/$SourceDir/testFile.txt" ]]
 then
